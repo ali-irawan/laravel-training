@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/about/{name?}', function( $name = 'Unknown' ){
+    echo "About $name";    
+})->name('about');
+
+Route::get('/contact', function(){
+    echo "Contact here";
+})->name('contact');
+
