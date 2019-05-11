@@ -10,4 +10,6 @@
 // Add your custom css
 .nav-link.active {
     font-weight: bold;
+    color: $menu-active;
+    border-bottom: solid 2px $menu-active;
 }
