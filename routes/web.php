@@ -16,10 +16,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about/{name?}', function( $name = 'Unknown' ){
-    echo "About $name";    
+    return view('about');   
 })->name('about');
 
 Route::get('/contact', function(){
-    echo "Contact here";
+    return view('contact');
 })->name('contact');
 
