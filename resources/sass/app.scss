@@ -6,3 +6,8 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Add your custom css
+.nav-link.active {
+    font-weight: bold;
+}
