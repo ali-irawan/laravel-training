@@ -11,15 +11,24 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('home');
 })->name('home');
+*/
+Route::get('/','HomeController@index')->name('home');
 
+/*
 Route::get('/about/{name?}', function( $name = 'Unknown' ){
     return view('about');   
 })->name('about');
+*/
+Route::get('/about/{name?}','AboutController@index')->name('about');
 
+/*
 Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
+*/
+Route::get('/contact','ContactController@index')->name('contact');
 

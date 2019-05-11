@@ -5,11 +5,14 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
 // Add your custom css
 .nav-link.active {
     font-weight: bold;
     color: $menu-active;
     border-bottom: solid 2px $menu-active;
+}
+.content {
+    padding: 20px 10px;
 }
