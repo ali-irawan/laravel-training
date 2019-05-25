@@ -14,6 +14,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+        // Make sure about page renders well
+        $response = $this->get('/about');
+
+        $response->assertStatus(200);
     }
 }

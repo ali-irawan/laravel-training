@@ -30,7 +30,7 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 */
-Route::group([ 'middleware' => 'validate.time.access' ], function(){
+Route::group([  ], function(){
 
     Route::get('/contact','ContactController@index')->name('contact');
     Route::post('/contact','ContactController@submit');
