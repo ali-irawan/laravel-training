@@ -30,5 +30,15 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 */
-Route::get('/contact','ContactController@index')->name('contact');
+Route::group([ 'middleware' => 'validate.time.access' ], function(){
 
+    Route::get('/contact','ContactController@index')->name('contact');
+    Route::post('/contact','ContactController@submit');
+
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
